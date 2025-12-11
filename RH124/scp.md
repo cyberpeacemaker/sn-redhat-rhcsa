@@ -1,0 +1,6 @@
+| Command    | Purpose                         | How it works                                                                         | Pros                                                       | Cons                                                                        |
+| ---------- | ------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------- | --------------------------------------------------------------------------- |
+| **find**   | Search for files/directories    | Walks the filesystem in real time, can filter by name, type, size, time, permissions | Accurate, flexible, powerful (e.g., delete, exec commands) | Slower on large filesystems                                                 |
+| **locate** | Quickly find files by name      | Uses a prebuilt **database** of file paths (updated via `updatedb`)                  | Very fast, simple                                          | Database may be outdated; cannot filter by timestamps or size               |
+| **grep**   | Search **inside file contents** | Reads file contents line by line, matches patterns or regex                          | Flexible, searches inside files, can use regex             | Cannot find files by name alone; slower for huge files without optimization |
+
