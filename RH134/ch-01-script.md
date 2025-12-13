@@ -1,7 +1,6 @@
 ```shell
-set, ($(())), 
+export, env, $PATH, source, set, ($(())), 
 arr=(a b c), ${arr[@]}, ${arr[*]}, $?
-export, env, $PATH, source
 which
 #!/usr/bin/bash
 seq
@@ -9,8 +8,8 @@ seq
 
 ```
 - bash(1) PROMPTING, EXPANSION, errno, test
-- variable , {shell/env} var,, types {string/numeric/array}
-- common substitution, arithmetic expansion, 
+- shebang, variable , {shell/env} var,, types {string/numeric/array}
+- , common substitution, arithmetic expansion, 
 - {single/double} string, suppress [globbing, shell expansion], suppress [command, variable] substitution
 * **Parameter expansion** (`${variable}`).
 * **Command substitution** (`$(command)`).
@@ -19,7 +18,7 @@ seq
 * **Array indexing** (`${array[index]}`).
 TODO: 30
 - `/etc/profile`, `/etc/bash.bashrc`
-- [numeric comparison, string comparison, string unary]
+- exit code, [numeric comparison, string comparison, string unary]
 ---
 
 Bash arrays are just a list of individual variables. This means there are no optimizations like memory resizing or pre-allocating space, which you might find in more sophisticated data structures in other languages. As a result, arrays in Bash are simple and not as flexible or efficient as in other languages.
